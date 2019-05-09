@@ -1,0 +1,37 @@
+<form [formGroup]="myForm">
+  <h1>FDC Inputs 2019 : </h1>
+  <table>
+    <tr>
+    <td>Multiplier :</td>
+    <td><input ngModel formControlName="multiplier" class="form-control" fdcNumberMask="decimal"></td>
+    <td> value is : {{myForm.get('multiplier').value}}</td>
+</tr>
+<tr>
+    <td>
+Percent :
+    </td>
+    <td>
+<input ngModel formControlName="percent" fdcNumberMask="percent">
+    </td>
+    <td>
+  value is :{{myForm.get('percent').value}}
+    </td>
+</tr>
+<tr>
+    <td>
+Currency :
+    </td>
+    <td>
+ <input ngModel formControlName="currency" fdcNumberMask="currency">
+    </td>
+    <td>
+  value is :{{myForm.get('currency').value}}
+    </td>
+    </tr>
+    <tr>
+      <td>Other Number :</td>
+      <td><input ngModel formControlName="otherNumber" fdcNumberMask="integer"></td>
+      <td>value is :{{myForm.get('otherNumber').value}}</td>
+    </tr>
+  </table>
+</form>
